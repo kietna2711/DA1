@@ -1,0 +1,424 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    font-size: 12px;
+    line-height: 1.6;
+}
+/* Định dạng cơ bản cho nút xóa */
+.btn-delete {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f44336; /* Màu đỏ */
+    color: white;
+    text-decoration: none; /* Loại bỏ gạch chân */
+    border-radius: 5px; /* Bo tròn góc */
+    font-size: 14px; /* Kích thước chữ */
+    text-align: center;
+    transition: all 0.3s ease; /* Hiệu ứng hover */
+}
+
+/* Hiệu ứng khi rê chuột qua nút */
+.btn-delete:hover {
+    background-color: #d32f2f; /* Màu đỏ đậm hơn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng */
+}
+
+/* Tùy chọn thêm: Nếu nút nằm trong bảng */
+td .btn-delete {
+    margin: 0 auto; /* Căn giữa trong ô bảng */
+}
+
+
+header{
+
+    top: 0; /* Vị trí dính */
+    z-index: 1000; /* Đảm bảo menu ở trên cùng */
+}
+header.hidden{
+    display: none;
+}
+
+
+  .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+
+}
+
+.logo {
+    font-family: 'Cursive';
+    font-size: 24px;
+    font-weight: bold;
+    color: #8B4513; /* Similar to the color in your image */
+    text-decoration: none;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+  
+}
+
+.search-bar {
+    padding: 5px 10px; 
+    border: 1px solid #ccc;
+ 
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+}
+.right-icons img{
+    width: 30px;
+    height: 30px;
+}
+.right-icons a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    position: relative;
+}
+
+.icon-user::before, .icon-heart::before, .icon-cart::before {
+    content: '';
+    display: inline-block;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #FF66B2;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 10px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #FF66B2;
+}
+
+
+
+
+
+.navbar {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    
+}
+.navbar .menu-sp{
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+
+.nav-links li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF66B2;
+}
+
+/* Submenu styling */
+.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 120%; 
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    width: 400px;
+    
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+    list-style: none;
+ 
+}
+.submenu li {
+    white-space: nowrap;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    color: #333;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    display: block;
+    
+}
+
+.submenu a:hover {
+    background-color: #FF66B2;
+    color: #fff;
+}
+
+.search-bar {
+    width: 400px;
+    padding: 5px 0; /* Khoảng cách từ text đến đường gạch dưới */
+    border: none;
+    border-bottom: 2px solid #ccc; /* Đường gạch dưới */
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar::placeholder {
+    color: #ccc; /* Màu của placeholder */
+    font-style: italic;
+}
+
+.search-bar:focus {
+    border-bottom: 2px solid #FF66B2; /* Màu đường gạch dưới khi focus */
+}
+
+.search-icon {
+    position: absolute;
+    right: 450px; /* Khoảng cách từ icon đến mép phải */
+    top: 90px;
+    transform: translateY(-50%);
+    color: #ccc; /* Màu của icon */
+    font-size: 20px; /* Kích thước icon */
+    pointer-events: none; /* Để icon không bị click */
+}
+
+.search-container:hover .search-bar {
+    border-bottom: 2px solid #FF66B2; /* Đổi màu gạch dưới khi hover */
+}
+
+
+.search-bar::placeholder {
+    color: #ccc; /* Màu của placeholder */
+    font-style: italic;
+}
+
+.search-bar:focus {
+    border-bottom: 2px solid #FF66B2; /* Màu đường gạch dưới khi focus */
+}
+
+.search-icon {
+    position: absolute;
+    right: 450px; /* Khoảng cách từ icon đến mép phải */
+    top: 90px;
+    transform: translateY(-50%);
+    color: #ccc; /* Màu của icon */
+    font-size: 20px; /* Kích thước icon */
+    pointer-events: none; /* Để icon không bị click */
+}
+
+.search-container:hover .search-bar {
+    border-bottom: 2px solid #FF66B2; /* Đổi màu gạch dưới khi hover */
+}
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Về Chúng Tôi Section */
+.about-us-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-us-text {
+    flex: 1;
+}
+
+.about-us-images {
+    flex: 1;
+    display: flex;
+}
+.about-us-text h3{
+    color: pink;
+}
+.about-us-images img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Liên Hệ Section */
+.contact-info-section {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-images {
+    flex: 1;
+    justify-content: center;
+}
+
+.contact-info-text h3{
+    color: pink;
+}
+
+.contact-info-images img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-text {
+    flex: 1;
+    margin-left: -200px;
+}
+
+/* Kết Nối Ngay Với Chúng Tôi Section */
+.contact-form-section {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    color: #ff69b4;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 500px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #f0a500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 500px;
+}
+
+.contact-form button:hover {
+    background-color: #d98c00;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.social-media a {
+    color: #555;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff69b4;
+}
+
+.contact-map {
+    flex: 1;
+    align-items: center;
+}
+
+.contact-map iframe {
+    width: 80%;
+    height: 300px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

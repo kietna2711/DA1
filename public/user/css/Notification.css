@@ -1,0 +1,92 @@
+/* Nội dung thông báo */
+.notification-content {
+    padding: 12px;
+    color: #444;
+  }
+  
+  .notification-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+  
+  .notification-content ul li {
+    margin: 5px 0;
+    font-weight: bold; /* Chữ đậm để nổi bật các mục */
+    color: #333; /* Màu chữ đậm hơn một chút */
+  }
+  
+  .notification-content p {
+    font-size: 13px;
+    margin-top: 8px;
+    color: #555;
+  }
+  
+  /* Icon chuông */
+  .bell-icon {
+    position: fixed; /* Cố định vị trí */
+    bottom: 20px;    /* Cách cạnh dưới 20px */
+    left: 20px;     /* Cách cạnh phải 20px */
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #f8bfc4; /* Tông màu hồng nhạt */
+    border-radius: 50%;
+    padding: 12px;
+    color: white; /* Màu biểu tượng chuông */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Luôn ở trên nội dung trang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Hiệu ứng hover chuông */
+  .bell-icon:hover {
+    background-color: #f5a6ac; /* Màu hồng đậm hơn khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Thông báo */
+  .notification {
+    position: fixed; /* Cố định vị trí */
+    bottom: 70px; /* Đặt thông báo ngay phía trên chuông */
+    left: 20px;  /* Căn phải cùng với chuông */
+    width: 280px;
+    background-color: #f8bfc4; /* Tông màu hồng nhạt giống chuông */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Mặc định ẩn */
+    z-index: 1000; /* Dưới chuông nhưng trên nội dung trang */
+    font-size: 14px;
+    overflow: hidden;
+  }
+  
+  /* Mũi nhọn chỉ xuống chuông */
+  .notification::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Nằm phía dưới thông báo */
+    right: 20px; /* Căn ngang với chuông */
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f8bfc4; /* Màu mũi nhọn giống màu nền thông báo */
+  }
+  
+  /* Animation mở/đóng */
+  .notification {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

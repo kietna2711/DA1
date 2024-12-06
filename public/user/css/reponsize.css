@@ -1,0 +1,151 @@
+
+@media (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        align-items: flex-start;
+     
+    }
+    .ellipsis div {
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+    }
+    .left {
+    top: 100px;
+    align-items: center;
+    }
+    .right{
+    top: 100px;
+    left: 370px;
+    }
+
+    .logo img {
+        width: 150px;
+        height: auto;
+        align-items: center;
+        margin-left: 120px;
+    }
+    .search-container{
+        width: 300px;
+    }
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .right-icons {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+    .navbar .menu-sp{
+        position: absolute;
+        top: 390px;
+        right: 10px;
+        width: 35px;
+        display: block;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .has-submenu .submenu {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+    }
+    .th{
+        width: 100%;
+    }
+    .th1{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .ellipsis div{
+        display: flex;
+        align-items: center;
+    }
+    .tgoiy{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .search-bar {
+        width: 90%;
+    }
+    .ellipsis div {
+        width: 8px;
+        height: 8px;
+        margin: 0 2px;
+    }
+    .right-icons a {
+        margin-left: 10px;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .submenu {
+        width: 100%;
+    }
+
+    .submenu a {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .th{
+        width: 100%;
+    }
+    .th1{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+    }
+
+    .ellipsis div{
+        display: flex;
+        align-items: center;
+    }
+    .tgoiyt{
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .tgoiyt h1{
+        display: grid;
+        gap: 10px;
+        right: -200px;
+    }
+    .xemnhiu{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+    }
+}

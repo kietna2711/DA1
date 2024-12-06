@@ -1,0 +1,125 @@
+    /* General Footer Styles */
+    footer {
+        width: 100%;
+        margin-top: 90px;
+        padding: 40px 20px;
+        color: #333;
+        font-family: Arial, sans-serif;
+        background-image: url('img/footer2.jpg');
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+
+    }
+
+    /* Logo Section */
+    .footer-logo h2 {
+        font-family: "Brush Script MT", cursive; /* Script font for logo */
+        font-size: 30px;
+        color: #a55b3c;
+        margin-bottom: 10px;
+    }
+
+    .footer-logo p {
+        color: #666;
+        max-width: 250px;
+        font-size: 12px;
+    }
+    .footer-logo img{
+        width: 200px;
+        height: 140px;
+    }
+
+    .footer-section {
+        max-width: 200px;
+    }
+
+    .footer-section h3, .footer-social h3 {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .footer-section p,
+    .footer-section ul li,
+    .footer-social p {
+        font-size: 12px;
+        color: #666;
+    }
+
+    /* Link List Styling */
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+    }
+
+    .footer-section ul li a:hover {
+        color: #a55b3c;
+    }
+
+    /* Social Icons */
+    .footer-social {
+        text-align: left;
+    }
+
+    .footer-social p {
+        margin-bottom: 10px;
+        max-width: 250px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Footer Bottom */
+    .footer-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        color: #999;
+        font-size: 14px;
+        border-top: 1px solid #bb1b1b;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+    }
+
+    .footer-bottom .payment-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 20px;
+    }
+
+    .footer-bottom .payment-icons img {
+        width: 40px; 
+    }
