@@ -65,8 +65,9 @@
       
 
 <div class="th1">
-<?php if (isset($nhomsanpham)) {
-    $nhomsanpham = array_slice($nhomsanpham, 0, 8); // Lấy 8 sản phẩm đầu tiên
+<?php if (isset($sanphamhot)) {
+    $nhomsanpham = array_slice($sanphamhot, 0, 8);
+    // var_export($nhomsanpham);
     foreach ($nhomsanpham as $p) {
         $giaGoc = 950000    ;
         $giaGiam = $p['price']; // Giá hiện tại từ mảng sản phẩm
@@ -151,7 +152,7 @@
         </div>
     </div>
 <div class="sp">
-<?php if(isset($sanphamhot)){foreach($sanphamhot as $p){ ?>
+<?php if(isset($sanphamNew)){foreach($sanphamNew as $p){ ?>
     <div class="sanpham">
         <div class="sanpham1">14%</div>
         <img src="../public/user/img/<?=$p['image1'] ?>" alt="" class="anh1hover">

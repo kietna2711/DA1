@@ -23,6 +23,7 @@
                 $nhomsanpham = $this->productModel->getAllProduct();
             }
             $sanphamhot = $this->productModel->getHotProduct(); 
+            $sanphamNew = $this->productModel->getNewProduct();
             $blog = $this->productModel->getAllBlog(); 
             $categories =$this->categoryModel->getAllCate();
             $discounts = $this->discountModel->getAllDiscounts(); 

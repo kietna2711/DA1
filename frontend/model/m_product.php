@@ -17,6 +17,13 @@
                 return database::getInstance()->getAll($sql);
             }
             
+            public function getNewProduct() {
+                $sql = "SELECT * FROM product 
+                        WHERE is_hidden = 0 
+                        ORDER BY product_id DESC LIMIT 6"; // Lấy 8 sản phẩm mới nhất dựa trên product_id
+                return database::getInstance()->getAll($sql);
+            }
+            
             
             public function getHotDanhmuc($id){
                 $sql = "SELECT * FROM product WHERE category_id = $id AND is_hidden = 0"; // Thêm kiểm tra ẩn/hiện
