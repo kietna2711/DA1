@@ -37,7 +37,7 @@
 
 
     <div class="sp-banchay">
-        <h1 class="header">Bán chạy trong tháng</h1>
+        <h1 class="header">Sản phẩm Hot</h1>
         <div class="menunho">
         <?php if(isset($categories)){foreach($categories as $c){ ?>
                 <a class="menu-item" href="?page=nhomsanpham&id=<?=$c['category_id']?>"><?=$c['category_name']?></a>
