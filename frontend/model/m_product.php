@@ -12,18 +12,18 @@
                 return database::getInstance()->getAll($sql);
             }   
             // lay san pham hot
-            public function getHotProduct(){
-                $sql = "SELECT * FROM product WHERE (hot = 1 OR hot = 2) AND is_hidden = 0"; // Thêm kiểm tra hot = 2
+            public function getHotProduct() {
+                $sql = "SELECT * FROM product WHERE is_hidden = 0 ORDER BY sold DESC";
                 return database::getInstance()->getAll($sql);
             }
+            
             
             public function getNewProduct() {
                 $sql = "SELECT * FROM product 
                         WHERE is_hidden = 0 
-                        ORDER BY product_id DESC LIMIT 6"; // Lấy 8 sản phẩm mới nhất dựa trên product_id
+                        ORDER BY product_id DESC LIMIT 6";
                 return database::getInstance()->getAll($sql);
             }
-            
             
             public function getHotDanhmuc($id){
                 $sql = "SELECT * FROM product WHERE category_id = $id AND is_hidden = 0"; // Thêm kiểm tra ẩn/hiện

@@ -69,24 +69,20 @@
     $nhomsanpham = array_slice($sanphamhot, 0, 8);
     // var_export($nhomsanpham);
     foreach ($nhomsanpham as $p) {
-        $giaGoc = 950000    ;
-        $giaGiam = $p['price']; // Giá hiện tại từ mảng sản phẩm
-        $phanTramGiam = round((($giaGoc - $giaGiam) / $giaGoc) * 100);
 ?>
     <div class="sanpham">
-    <div class="sanpham1"><?= $phanTramGiam ?>%</div>
+    <!-- <div class="sanpham1"></div> -->
         <img src="../public/user/img/<?=$p['image1'] ?>" alt="" class="anh1hover">
         <img src="../public/user/img/<?=$p['image2'] ?>" alt="" class="anh2hover">
         <div class="hover-content">
             <a href="?page=trangchitiet&id=<?=$p['product_id'] ?>">
                 <div class="xn">Xem nhanh</div>
             </a>
-            <div class="sanpham1"><?= $phanTramGiam ?>%</div>
+            <!-- <div class="sanpham1"></div> -->
         </div>
         <div class="gt"><?=$p['name'] ?></div>
         <div class="gia">
-        <span class="giamgia"><?= number_format($giaGoc) ?>₫</span>
-        <span class="giamseo"><?= number_format($giaGiam) ?>₫</span>
+        <span class="giamseo"><?= number_format($p['price'])?>₫</span>
         </div>
         <a href="?page=addcart&id=<?=$p['product_id'] ?>"><button data-id="123" class="add-to-cart">Thêm vào giỏ hàng</button></a>
     </div>
@@ -154,12 +150,12 @@
 <div class="sp">
 <?php if(isset($sanphamNew)){foreach($sanphamNew as $p){ ?>
     <div class="sanpham">
-        <div class="sanpham1">14%</div>
+        <!-- <div class="sanpham1">14%</div> -->
         <img src="../public/user/img/<?=$p['image1'] ?>" alt="" class="anh1hover">
         <img src="../public/user/img/<?=$p['image2'] ?>" alt="" class="anh2hover">
         <div class="hover-content">
         <a href="?page=trangchitiet&id=<?=$p['product_id'] ?>">    <div class="xn">Xem nhanh</div> </a>
-            <div class="sanpham1">14%</div>
+            <!-- <div class="sanpham1">14%</div> -->
         </div>
         <a href="?page=trangchitiet&id=<?=$p['product_id'] ?>"><div class="gt"><?=$p['name'] ?></div></a>
         <div class="gia">

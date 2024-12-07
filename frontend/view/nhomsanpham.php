@@ -79,7 +79,7 @@
         foreach ($productsToShow as $p) {
             ?>
             <div class="sanpham">
-                <div class="sanpham1">14%</div>
+                <!-- <div class="sanpham1">14%</div> -->
                 <img src="../public/user/img/<?= $p['image1'] ?>" alt="" class="anh1hover">
                 <img src="../public/user/img/<?= $p['image2'] ?>" alt="" class="anh2hover">
                 <div class="hover-content">

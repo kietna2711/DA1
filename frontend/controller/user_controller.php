@@ -17,6 +17,7 @@
         // Handle login
         public function login($data) {
             $user = $this->userModel->getUser($data);
+            // var_dump($user);
 
             if ($user) {
                 // Login successful

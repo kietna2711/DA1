@@ -12,8 +12,7 @@
             
             
             public function addUser($data) {
-                // Debugging step
-                print_r($data); // Check if all values are present
+                // print_r($data);
             
                 // Check email existence
                 $checkEmailSql = "SELECT * FROM User WHERE email = :email";

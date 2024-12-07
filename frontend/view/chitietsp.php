@@ -67,14 +67,14 @@
                 <a href="?page=trangchitiet&id=<?=$p['product_id']?>">
                             
                             </a>
-                    <div class="sanpham1">14%</div>
+                    <!-- <div class="sanpham1">14%</div> -->
                     <img src="../public/user/img/<?=$p['image1']?>" alt="" class="anh1hover">
                     <img src="../public/user/img/<?=$p['image2']?>" alt="" class="anh2hover">
                     <div class="hover-content">
                         <a href="?page=trangchitiet&id=<?=$p['product_id']?>">
                             <div class="xn">Xem nhanh</div>
                         </a>
-                        <div class="sanpham1">14%</div>
+                        <!-- <div class="sanpham1">14%</div> -->
                     </div>
                     <div class="gt"><?=$p['name']?></div>
                     <div class="gia">
@@ -104,14 +104,14 @@
                 <a href="?page=trangchitiet&id=<?=$p['product_id']?>">
                             
                         </a>
-                    <div class="sanpham1">14%</div>
+                    <!-- <div class="sanpham1">14%</div> -->
                     <img src="../public/user/img/<?=$p['image1']?>" alt="" class="anh1hover">
                     <img src="../public/user/img/<?=$p['image2']?>" alt="" class="anh2hover">
                     <div class="hover-content">
                         <a href="?page=trangchitiet&id=<?=$p['product_id']?>">
                             <div class="xn">Xem nhanh</div>
                         </a>
-                        <div class="sanpham1">14%</div>
+                        <!-- <div class="sanpham1">14%</div> -->
                     </div>
                     <div class="gt"><?=$p['name']?></div>
                     <div class="gia">
